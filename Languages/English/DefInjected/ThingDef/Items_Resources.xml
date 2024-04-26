@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RFFCement.label>Cement</RFFCement.label>
+  <RFFCement.description>Cement is a binder, a substance used in construction that sets, hardens and adheres to other materials, binding them together.</RFFCement.description>
+  <RFFConcrete.label>Concrete</RFFConcrete.label>
+  <RFFConcrete.description>A versatile construction material. It can be used directly, as to pour concrete flooring, or made into "cinder" blocks for walls.</RFFConcrete.description>
+  <RFFBlocksConcrete.label>concrete blocks</RFFBlocksConcrete.label>
+  <RFFBlocksConcrete.description>Blocks of concrete, of the sort often known as "cinder blocks". They can be used to build anything that can be constructed from stone blocks. Cinder block walls are weaker than granite walls, but can be built more quickly.</RFFBlocksConcrete.description>
+  <RFFBlocksConcrete.stuffProps.stuffAdjective>cinder block</RFFBlocksConcrete.stuffProps.stuffAdjective>
+  <CrushedRocks.label>Crushed rocks</CrushedRocks.label>
+  <CrushedRocks.description>Stone chunks that have been broken up into smaller pieces.</CrushedRocks.description>
+  <SandPile.label>Pile of sand</SandPile.label>
+  <SandPile.description>Sand, possibly dug up from a desert or a beach.</SandPile.description>
+</LanguageData>

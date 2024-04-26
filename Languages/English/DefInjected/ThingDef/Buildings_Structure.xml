@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RockMill.label>cement - concrete mixer</RockMill.label>
+  <RockMill.description>Cement-Concrete Mixer: Your all-in-one solution for seamlessly mixing both cement and concrete blends with precision and efficiency. Faster than using a table and comes with a rock cutter.</RockMill.description>
+  <RockMill_Blueprint.label>cement - concrete mixer (blueprint)</RockMill_Blueprint.label>
+  <RockMill_Blueprint_Install.label>cement - concrete mixer (blueprint)</RockMill_Blueprint_Install.label>
+  <RockMill_Frame.label>cement - concrete mixer (building)</RockMill_Frame.label>
+  <RockMill_Frame.description>Cement-Concrete Mixer: Your all-in-one solution for seamlessly mixing both cement and concrete blends with precision and efficiency. Faster than using a table and comes with a rock cutter.</RockMill_Frame.description>
+  <RFFConcreteDoor.label>steel-reinforced concrete door</RFFConcreteDoor.label>
+  <RFFConcreteDoor.description>Divides rooms. Must be manually opened and closed, which slows people down.</RFFConcreteDoor.description>
+  <RFFConcreteDoor_Blueprint.label>steel-reinforced concrete door (blueprint)</RFFConcreteDoor_Blueprint.label>
+  <RFFConcreteDoor_Frame.label>steel-reinforced concrete door (building)</RFFConcreteDoor_Frame.label>
+  <RFFConcreteDoor_Frame.description>Divides rooms. Must be manually opened and closed, which slows people down.</RFFConcreteDoor_Frame.description>
+  <RFFConcreteAutodoor.label>steel-reinforced concrete autodoor</RFFConcreteAutodoor.label>
+  <RFFConcreteAutodoor.description>Divides rooms. Powered operation allows people to move through the door without slowing down.</RFFConcreteAutodoor.description>
+  <RFFConcreteAutodoor_Blueprint.label>steel-reinforced concrete autodoor (blueprint)</RFFConcreteAutodoor_Blueprint.label>
+  <RFFConcreteAutodoor_Frame.label>steel-reinforced concrete autodoor (building)</RFFConcreteAutodoor_Frame.label>
+  <RFFConcreteAutodoor_Frame.description>Divides rooms. Powered operation allows people to move through the door without slowing down.</RFFConcreteAutodoor_Frame.description>
+  <RFFPlasticreteDoor.label>plasteel-reinforced concrete door</RFFPlasticreteDoor.label>
+  <RFFPlasticreteDoor.description>Divides rooms. Must be manually opened and closed, which slows people down.</RFFPlasticreteDoor.description>
+  <RFFPlasticreteDoor_Blueprint.label>plasteel-reinforced concrete door (blueprint)</RFFPlasticreteDoor_Blueprint.label>
+  <RFFPlasticreteDoor_Frame.label>plasteel-reinforced concrete door (building)</RFFPlasticreteDoor_Frame.label>
+  <RFFPlasticreteDoor_Frame.description>Divides rooms. Must be manually opened and closed, which slows people down.</RFFPlasticreteDoor_Frame.description>
+  <RFFPlasticreteAutodoor.label>plasteel-reinforced concrete autodoor</RFFPlasticreteAutodoor.label>
+  <RFFPlasticreteAutodoor.description>Divides rooms. Powered operation allows people to move through the door without slowing down.</RFFPlasticreteAutodoor.description>
+  <RFFPlasticreteAutodoor_Blueprint.label>plasteel-reinforced concrete autodoor (blueprint)</RFFPlasticreteAutodoor_Blueprint.label>
+  <RFFPlasticreteAutodoor_Frame.label>plasteel-reinforced concrete autodoor (building)</RFFPlasticreteAutodoor_Frame.label>
+  <RFFPlasticreteAutodoor_Frame.description>Divides rooms. Powered operation allows people to move through the door without slowing down.</RFFPlasticreteAutodoor_Frame.description>
+  <RFFConcreteWall.label>poured concrete wall</RFFConcreteWall.label>
+  <RFFConcreteWall.description>A concrete wall, stronger than standard stone walls.</RFFConcreteWall.description>
+  <RFFConcreteWall_Blueprint.label>poured concrete wall (blueprint)</RFFConcreteWall_Blueprint.label>
+  <RFFConcreteWall_Frame.label>poured concrete wall (building)</RFFConcreteWall_Frame.label>
+  <RFFConcreteWall_Frame.description>A concrete wall, stronger than standard stone walls.</RFFConcreteWall_Frame.description>
+  <RFFReinforcedConcreteWall.label>steel-reinforced concrete wall</RFFReinforcedConcreteWall.label>
+  <RFFReinforcedConcreteWall.description>A reinforced concrete wall. Much stronger than standard concrete or stone walls, it's well suited to use in bunkers and other high-security fortified locations.</RFFReinforcedConcreteWall.description>
+  <RFFReinforcedConcreteWall_Blueprint.label>steel-reinforced concrete wall (blueprint)</RFFReinforcedConcreteWall_Blueprint.label>
+  <RFFReinforcedConcreteWall_Frame.label>steel-reinforced concrete wall (building)</RFFReinforcedConcreteWall_Frame.label>
+  <RFFReinforcedConcreteWall_Frame.description>A reinforced concrete wall. Much stronger than standard concrete or stone walls, it's well suited to use in bunkers and other high-security fortified locations.</RFFReinforcedConcreteWall_Frame.description>
+  <RFFPlasticreteWall.label>plasteel-reinforced concrete wall</RFFPlasticreteWall.label>
+  <RFFPlasticreteWall.description>The ultimate in defensive fortifications, this massive reinforced wall is constructed from layers of concrete, steel and plasteel.</RFFPlasticreteWall.description>
+  <RFFPlasticreteWall_Blueprint.label>plasteel-reinforced concrete wall (blueprint)</RFFPlasticreteWall_Blueprint.label>
+  <RFFPlasticreteWall_Frame.label>plasteel-reinforced concrete wall (building)</RFFPlasticreteWall_Frame.label>
+  <RFFPlasticreteWall_Frame.description>The ultimate in defensive fortifications, this massive reinforced wall is constructed from layers of concrete, steel and plasteel.</RFFPlasticreteWall_Frame.description>
+  <Embrasure.label>embrasure</Embrasure.label>
+  <Embrasure.description>An impassable wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</Embrasure.description>
+  <Embrasure_Blueprint.label>embrasure (blueprint)</Embrasure_Blueprint.label>
+  <Embrasure_Frame.label>embrasure (building)</Embrasure_Frame.label>
+  <Embrasure_Frame.description>An impassable wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</Embrasure_Frame.description>
+  <BrickEmbrasure.label>brick embrasure</BrickEmbrasure.label>
+  <BrickEmbrasure.description>A brick wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</BrickEmbrasure.description>
+  <BrickEmbrasure_Blueprint.label>brick embrasure (blueprint)</BrickEmbrasure_Blueprint.label>
+  <BrickEmbrasure_Frame.label>brick embrasure (building)</BrickEmbrasure_Frame.label>
+  <BrickEmbrasure_Frame.description>A brick wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</BrickEmbrasure_Frame.description>
+  <RFFConcreteEmbrasure.label>steel-reinforced concrete embrasure</RFFConcreteEmbrasure.label>
+  <RFFConcreteEmbrasure.description>A bunker wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</RFFConcreteEmbrasure.description>
+  <RFFConcreteEmbrasure_Blueprint.label>steel-reinforced concrete embrasure (blueprint)</RFFConcreteEmbrasure_Blueprint.label>
+  <RFFConcreteEmbrasure_Frame.label>steel-reinforced concrete embrasure (building)</RFFConcreteEmbrasure_Frame.label>
+  <RFFConcreteEmbrasure_Frame.description>A bunker wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</RFFConcreteEmbrasure_Frame.description>
+  <RFFPlasticreteEmbrasure.label>plasteel-reinforced concrete embrasure</RFFPlasticreteEmbrasure.label>
+  <RFFPlasticreteEmbrasure.description>A plasteel-reinforced concrete bunker wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</RFFPlasticreteEmbrasure.description>
+  <RFFPlasticreteEmbrasure_Blueprint.label>plasteel-reinforced concrete embrasure (blueprint)</RFFPlasticreteEmbrasure_Blueprint.label>
+  <RFFPlasticreteEmbrasure_Frame.label>plasteel-reinforced concrete embrasure (building)</RFFPlasticreteEmbrasure_Frame.label>
+  <RFFPlasticreteEmbrasure_Frame.description>A plasteel-reinforced concrete bunker wall with openings to allow warlike pawns to shoot at each other. (Also acts as a permanently-open vent, equalizing temperatures on both sides of the wall.)</RFFPlasticreteEmbrasure_Frame.description>
+</LanguageData>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Rainbeau's Concrete Makeover -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[RF] Concrete (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RockMill"]/graphicData/drawSize</xpath>
+					<value> <drawSize>(3,4)</drawSize> </value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RockMill"]/size</xpath>
+					<value>
+						<size>(1,2)</size>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RFFBlocksConcrete"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>RBlocksConcrete</texPath>
+					</value>
+				</li>
+				
+			</operations>
+		</match> 
+	</Operation>
+</Patch>

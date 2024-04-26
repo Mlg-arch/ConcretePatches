@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!--Replace Steel as a building material for concrete/asphalt tiles-->
+	<Operation Class="PatchOperationSetName">
+		<success>Always</success>
+		<xpath>
+			Defs/TerrainDef
+			[
+				defName[contains(text(),"Concrete") or contains(text(),"Asphalt")]
+				or label[contains(text(),"Concrete") or contains(text(),"concrete") or contains(text(),"Asphalt") or contains(text(),"asphalt")]
+				or description[contains(text(),"Concrete") or contains(text(),"concrete") or contains(text(),"Asphalt") or contains(text(),"asphalt")]
+				and costList/Steel
+			]
+			[
+				not(costList/Silver)
+				and not(costList/Gold)
+				and not(costList/Plasteel)
+				and not(costList/Uranium)
+				and not(costList/WoodLog)
+				and not(costList/Hay)
+				and not(burnedDef)
+			]
+			/costList/Steel
+		</xpath>
+		<name>RFFConcrete</name>
+	</Operation>
+	
+	<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+		<xpath>Defs/ThingDef[defName="Embrasure"]</xpath>
+	</Operation>
+	
+	<!--Add Tech Requirements to Concrete Wall-->
+	<Operation Class="XmlExtensions.FindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Classical</li>
+		</mods>
+			<caseTrue>
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName = "VFEC_CementMaking"][not(prerequisites)]</xpath>
+						<value>
+							<prerequisites>
+								<li>Stonecutting</li>
+							</prerequisites>
+						</value>
+				</Operation>
+			
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "RFFConcreteWall"][not(researchPrerequisites)]</xpath>
+						<value>
+							<researchPrerequisites>
+								<li>VFEC_CementMaking</li>
+							</researchPrerequisites>
+						</value>
+				</Operation>
+				
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "RockMill"]/researchPrerequisites</xpath>
+						<value> <li>VFEC_CementMaking</li> </value>
+				</Operation>
+				
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeConcrete"]	|
+							Defs/RecipeDef[defName = "MakeConcrete5"]	|
+							Defs/RecipeDef[defName = "MakeConcreteOneStep"]	|
+							Defs/RecipeDef[defName = "MakeConcreteBlocks"]	|
+							Defs/RecipeDef[defName = "MakeConcreteRM"]	|
+							Defs/RecipeDef[defName = "MakeConcrete5RM"]	|
+							Defs/RecipeDef[defName = "MakeConcreteOneStepRM"]	|
+							Defs/RecipeDef[defName = "MakeConcreteBlocksRM"]	|
+							Defs/RecipeDef[defName = "MakeCement"]	|
+							Defs/RecipeDef[defName = "MakeCementBlock"]
+						</xpath>
+						<value>
+							<researchPrerequisite>VFEC_CementMaking</researchPrerequisite>
+						</value>
+				</Operation>
+			</caseTrue>
+			
+			<caseFalse>
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "RFFConcreteWall"][not(researchPrerequisites)]</xpath>
+						<value>
+							<researchPrerequisites>
+								<li>Stonecutting</li>
+							</researchPrerequisites>
+						</value>
+				</Operation>
+				
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "RockMill"]/researchPrerequisites</xpath>
+						<value> <li>Stonecutting</li> </value>
+				</Operation>
+				
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeConcrete"]	|
+							Defs/RecipeDef[defName = "MakeConcrete5"]	|
+							Defs/RecipeDef[defName = "MakeConcreteOneStep"]	|
+							Defs/RecipeDef[defName = "MakeConcreteBlocks"]	|
+							Defs/RecipeDef[defName = "MakeConcreteRM"]	|
+							Defs/RecipeDef[defName = "MakeConcrete5RM"]	|
+							Defs/RecipeDef[defName = "MakeConcreteOneStepRM"]	|
+							Defs/RecipeDef[defName = "MakeConcreteBlocksRM"]	|
+							Defs/RecipeDef[defName = "MakeCement"]	|
+							Defs/RecipeDef[defName = "MakeCementBlock"]
+						</xpath>
+						<value>
+							<researchPrerequisite>Stonecutting</researchPrerequisite>
+						</value>
+				</Operation>
+			</caseFalse>
+	</Operation>
+	
+	<!--Add Tech Requirements to Steel Bridges from VFE-A-->
+	<Operation Class="XmlExtensions.FindMod">
+		<mods>
+			<li>Vanilla Furniture Expanded - Architect</li>
+		</mods>
+			<caseTrue>			
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<success>Always</success>
+					<xpath>
+						Defs/TerrainDef[defName = "VFEArch_BridgeSteel" or defName = "RimNauts2_SteelBridge" ][not(researchPrerequisites)]
+					</xpath>
+						<value>
+							<researchPrerequisites>
+								<li>Smithing</li>
+							</researchPrerequisites>
+						</value>
+				</Operation>
+				
+				<Operation Class="XmlExtensions.PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VFEArch_FineWall"]</xpath>
+						<value>
+							<researchPrerequisites>
+								<li>Smithing</li>
+							</researchPrerequisites>
+						</value>
+				</Operation>
+			</caseTrue>
+	</Operation>
+	
+	<!--Add Sand to sandbags-->
+			<Operation Class="XmlExtensions.OptionalPatch">
+				<modId>Muad.concretepatches</modId>
+				<key>Concretepatches_Settings_UseSRSand</key>
+				<defaultValue>false</defaultValue>
+				<caseFalse>
+					<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+						<xpath>//Defs/ThingDef[defName="Sandbags"]</xpath>
+						<value>
+							<costList> <SandPile>2</SandPile> </costList>
+						</value>
+					</Operation>
+				</caseFalse>
+			</Operation>
+	
+</Patch>

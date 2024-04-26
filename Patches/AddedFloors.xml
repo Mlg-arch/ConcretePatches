@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs</xpath>
+      <value>
+         <TerrainDef ParentName="FlagstoneBase">
+			<defName>FlagstoneCinderblocks</defName>
+			<label>cinder block flagstone</label>
+			<color>(192,192,192)</color>
+			<costList>
+			  <RFFBlocksConcrete>4</RFFBlocksConcrete>
+			</costList>
+		  </TerrainDef>
+		  
+		  <TerrainDef ParentName="TileStoneBase">
+			<defName>TileCinderblocks</defName>
+			<label>cinder block tile</label>
+			<color>(192,192,192)</color>
+			<costList>
+			  <RFFBlocksConcrete>4</RFFBlocksConcrete>
+			</costList>
+		  </TerrainDef>
+		</value>
+   </Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Furniture Expanded - Architect</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<TerrainDef ParentName="CobblestoneBase">
+							<defName>VFEArch_CobblestoneFloorCinder</defName>
+							<label>cinder block cobblestone floor</label>
+							<color>(192,192,192)</color>
+							<costList>
+							  <RFFBlocksConcrete>4</RFFBlocksConcrete>
+							</costList>
+						</TerrainDef>
+					</value>
+				</li>
+			</operations>
+		</match> 
+	</Operation>
+	
+</Patch>

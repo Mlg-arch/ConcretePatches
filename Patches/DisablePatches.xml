@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Disable Embrasures -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_DisableEmbrasures</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="BrickEmbrasure"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="Embrasure"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFConcreteEmbrasure"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFPlasticreteEmbrasure"]</xpath>
+			</Operation>
+		</caseTrue>
+		<caseFalse>
+			<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+				 <safetyDepth>1</safetyDepth>
+				<xpath>Defs/ThingDef[defName="BrickEmbrasure" or defName="RFFConcreteEmbrasure" or defName="RFFPlasticreteEmbrasure"][not(designatorDropdown)]</xpath>
+				<value>
+					<designatorDropdown>RFCGroup_Embrasures</designatorDropdown>
+				</value>
+			</Operation>
+		</caseFalse>
+	</Operation>
+	
+	<!-- Disable Doors -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_DisableDoors</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFConcreteDoor"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFConcreteAutodoor"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFPlasticreteDoor"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFPlasticreteAutodoor"]</xpath>
+			</Operation>
+		</caseTrue>
+		<caseFalse>
+			<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+				 <safetyDepth>1</safetyDepth>
+				<xpath>Defs/ThingDef[defName="RFFConcreteDoor" or defName="RFFConcreteAutodoor" or defName="RFFPlasticreteDoor" or defName="RFFPlasticreteAutodoor"][not(designatorDropdown)]</xpath>
+				<value>
+					<designatorDropdown>RFCGroup_Doors</designatorDropdown>
+				</value>
+			</Operation>
+		</caseFalse>
+	</Operation>
+	
+	<!-- Disable Walls -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_DisableWalls</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFConcreteWall"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFReinforcedConcreteWall"]</xpath>
+			</Operation>
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="RFFPlasticreteWall"]</xpath>
+			</Operation>
+		</caseTrue>
+		<caseFalse>
+			<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+				 <safetyDepth>1</safetyDepth>
+				<xpath>Defs/ThingDef[defName="RFFConcreteWall" or defName="RFFReinforcedConcreteWall" or defName="RFFPlasticreteWall"][not(designatorDropdown)]</xpath>
+				<value>
+					<designatorDropdown>RFCGroup_Walls</designatorDropdown>
+				</value>
+			</Operation>
+		</caseFalse>
+	</Operation>
+	
+	<!-- Disable Rimnauts 2 Steel Bridge -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_DisableR2Bridge</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			 <Operation Class="PatchOperationConditional">
+				<xpath>Defs/TerrainDef[defName="RimNauts2_SteelBridge"]</xpath>
+				<match Class="XmlExtensions.PatchOperationSafeRemove">
+					<xpath>Defs/TerrainDef[defName="RimNauts2_SteelBridge"]</xpath>
+				</match>
+			</Operation>
+		</caseTrue>
+	</Operation>
+</Patch>

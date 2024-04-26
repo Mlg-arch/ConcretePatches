@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<XmlExtensions.SettingsMenuDef>
+		<defName>ConcretePatchesSettings</defName> <!--Can be anything unique with no periods-->
+		<modId>Muad.concretepatches</modId> <!--MUST be the same as the one entered earlier-->    
+		<label>Concrete Patches</label> <!-- This is what displays as your mod's name-->    
+		<settings> <!--This is where you define what settings are in the settings menu-->
+
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>For any changed settings to take effect the game must be restarted.</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Gameplay Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Hardmode -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Hardmode</label>
+				<key>Concretepatches_Settings_Hardmode</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes building recipes to be more realistic. Stone floors and bridges now necessitate cement, mirroring real-world construction norms. However, the cost-effective cobblestone and flagstone floors bypass this requirement. Additionally, asphalt floors need crushed rocks, simulating road construction techniques. Armoured floors and walls will also use concrete and a lot of starting technology (like barricades) will be locked under tech (for tribals at least).</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Hardmode Walls-->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Hardmode Walls</label>
+				<key>Concretepatches_Settings_HardmodeWalls</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Separates vanilla walls into two categories - the ones made of wood and metal stuff, and one category of vanilla walls that is made of stony stuff and needs cement to be constructed. Stony walls take slightly more to be built and are slight stronger than their vanilla stony wall counterparts.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Cement Press Gives Cement -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Cement Press Yield Correction</label>
+				<key>Concretepatches_Settings_CementPressGivesCement</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>If you are using Vanilla Factions Expanded - Classical and activate this patch, Cement Press will give 3 units of cement when used. This is more (though not completely) realistic. If this option is disabled, this will give you 35 Cinder blocks from [RF] Concrete. Regardless, this mod completely removes the VFEC concrete blocks.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Limestone give more Cement -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Higher Cement Yield from Limestone</label>
+				<key>Concretepatches_Settings_LimestoneGivesMoreCement</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>For gameplay balance, [RF] Concrete allows you to produce cement from any type of rock. However, in reality, limestone is the primary material used in cement production. This option introduces two new recipes that significantly increase cement output. These recipes can only be used with limestone chunks or blocks in a smelter. This option is particularly beneficial for players seeking to make the most of increased cement demand, especially when utilizing the hardmode options.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Disable Buildings/Things</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.GapLine"> </li>
+
+			<!-- Disable Embrasures -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Disable [RF] Concrete Embrasures</label>
+				<key>Concretepatches_Settings_DisableEmbrasures</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Disables [RF] Concrete Embrasures, removing them from the game. Use it if you prefer embrasures from other mods. It can cause red errors if you have mods that reference these embrasures or if you have these embrasures built. If you prefer a less conflict-prone approach, want to hide just a few embrasures, or if you have already built embrasures from this mod, use Cherry Picker or I Aint Building That instead of this option.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Disable Doors -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Disable [RF] Concrete Reinforced Doors</label>
+				<key>Concretepatches_Settings_DisableDoors</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Disables [RF] Concrete reinforced doors and autodoors, removing them from the game. Use it if you prefer reinforced doors from other mods. It can cause red errors if you have mods that reference these doors or if you have these doors built. If you prefer a less conflict-prone approach, want to hide just a few doors, or if you have already built doors from this mod, use Cherry Picker or I Aint Building That instead of this option.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Disable Walls -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Disable [RF] Concrete Reinforced Walls</label>
+				<key>Concretepatches_Settings_DisableWalls</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Disables [RF] Concrete "concrete wall", as well as reinforced walls, removing them from the game. Use it if you prefer reinforced walls from other mods. It can cause red errors if you have mods that reference these walls or if you have these walls built. If you prefer a less conflict-prone approach, want to hide just a few walls, or if you have already built walls from this mod, use Cherry Picker or I Aint Building That instead of this option.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Remove Rimnauts 2 Steel Bridge -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Remove Rimnauts 2 Steel Bridget</label>
+				<key>Concretepatches_Settings_DisableR2Bridge</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Rimnauts 2 has a steel bridge that might be a duplicate for you. This option removes it.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Integration Patches</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Only enable ONE of these patches.</text>
+				<font>Small</font>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine"></li>
+			<!-- Use Soil Relocation Framework Sand -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Use Soil Relocation Framework Sand</label>
+				<key>Concretepatches_Settings_UseSRSand</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>This patch replaces the RF Concrete sand with the sand from Soil Relocation Framework. This makes both mods more compatible - avoiding a duplicate sand item.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Integrate with Expanded Materials - Stones and Mortars -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Integrate with Expanded Materials - Stones and Mortars</label>
+				<key>Concretepatches_Settings_IntegrateEMSM</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>This patch integrates with Expanded Materials - Stones and Mortars. It uses Sand, Cement and Concrete Blocks from the latter in the recipes of [RF] Concrete. Integration is untested since the mod is not updated for 1.5.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>

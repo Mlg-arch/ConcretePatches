@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!--Hardmode Patches-->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_Hardmode</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<!--Add Cement to non-steel and non-wood Bridges-->
+			<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+				<success>Always</success>
+				<xpath>
+					Defs/TerrainDef
+					[
+						defName[contains(text(),"Bridge")]
+						or label[contains(text(),"Bridge") or contains(text(),"bridge")]
+						or description[contains(text(),"Bridge") or contains(text(),"bridge")]
+					]
+					[
+						costList/BlocksGranite
+						or costList/BlocksLimestone
+						or costList/BlocksSlate
+						or costList/BlocksMarble
+						or costList/BlocksSandstone
+						or costList/RFFBlocksConcrete
+					]
+					[
+						not(costList/WoodLog)
+						and not(costList/Steel)
+						and not(costList/RFFConcrete)
+						and not(burnedDef)
+					]
+					/costList
+				</xpath>
+				<value>
+					<RFFCement>3</RFFCement>
+				</value>
+			</Operation>
+			
+			<!--Add Cement to stone-complex floors-->
+			<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+				<success>Always</success>
+				<xpath>
+					Defs/TerrainDef
+					[
+						defName[contains(text(),"tile") or contains(text(),"floor")]
+						or label[contains(text(),"tile") or contains(text(),"fine") or contains(text(),"floor") or contains(text(),"slabs") or contains(text(),"polished") or contains(text(),"mosaic") or contains(text(),"mosaics") ]
+						or description[contains(text(),"tile") or contains(text(),"fine") or contains(text(),"floor") or contains(text(),"slabs") or contains(text(),"polished")]
+					]
+					[
+						costList/BlocksGranite
+						or costList/BlocksLimestone
+						or costList/BlocksSlate
+						or costList/BlocksMarble
+						or costList/BlocksSandstone
+						or costList/RFFBlocksConcrete
+					]
+					[
+						not(costList/WoodLog)
+						and not(costList/Steel)
+						and not(costList/RFFConcrete)
+						and not(label[contains(text(),"cobblestone") or contains(text(),"flagstone")])
+						and not(description[contains(text(),"cobblestone") or contains(text(),"flagstone")])
+						and not(burnedDef)
+					]
+					/costList
+				</xpath>
+				<value>
+					<RFFCement>1</RFFCement>
+				</value>
+			</Operation>
+			
+			<!--Barricades are under Complex Furniture research-->
+			<Operation Class="XmlExtensions.PatchOperationAdd">
+				<success>Always</success>
+				<xpath>
+					Defs/ThingDef[defName = "Barricade"][not(researchPrerequisites)]	|
+					Defs/ThingDef[defName = "FueledStove"][not(researchPrerequisites)]	|
+					Defs/ThingDef[defName = "TableSculpting"][not(researchPrerequisites)]	|
+					Defs/ThingDef[defName = "TableButcher"][not(researchPrerequisites)]
+				</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>ComplexFurniture</li>
+						</researchPrerequisites>
+					</value>
+			</Operation>
+			
+			<!--Gibbet cages need Smithing research-->
+			<Operation Class="XmlExtensions.PatchOperationAdd">
+				<success>Always</success>
+				<xpath>Defs/ThingDef[defName = "GibbetCage"][not(researchPrerequisites)]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>Smithing</li>
+						</researchPrerequisites>
+					</value>
+			</Operation>
+			
+			<!--Add Crushed Rocks to Asphalt-->
+			<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+				<success>Always</success>
+				<xpath>
+					Defs/TerrainDef
+					[
+						defName[contains(text(),"Asphalt")]
+						or label[contains(text(),"Asphalt") or contains(text(),"asphalt")]
+						or description[contains(text(),"Asphalt") or contains(text(),"asphalt")]
+					]
+					/costList
+				</xpath>
+				<value>
+					<CrushedRocks>1</CrushedRocks>
+				</value>
+			</Operation>
+			
+			<!--Add Concrete to Armored Walls-->
+				<Operation Class="XmlExtensions.PatchOperationSafeAdd">
+					<success>Always</success>
+					<xpath>
+						Defs/ThingDef[defName="VFEArch_ArmoredWall"]	|
+						Defs/TerrainDef
+						[
+							defName[contains(text(),"Armored")]
+							or label[contains(text(),"armored") or contains(text(),"armoured")]
+							or description[contains(text(),"armored") or contains(text(),"armoured")]
+						]
+					</xpath>
+					<value>
+						 <costList>
+							<RFFConcrete>3</RFFConcrete>
+						 </costList>
+					</value>
+				</Operation>
+		</caseTrue>
+	</Operation>
+
+	<!--Hardmode Walls Patches-->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_HardmodeWalls</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Wall"]/stuffCategories</xpath>
+					<value>
+						<stuffCategories>
+						  <li>Metallic</li>
+						  <li>Woody</li>
+						</stuffCategories>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<ThingDef ParentName="BuildingBase">
+						<defName>StonyWall</defName>
+						<label>stone wall</label>
+						<description>An impassable wall. Capable of holding up a roof. Cement binding makes it stronger.</description>
+						<thingClass>Building</thingClass>
+						<category>Building</category>
+						<graphicData>
+						  <texPath>Things/Building/Linked/Wall</texPath>
+						  <graphicClass>Graphic_Appearances</graphicClass>
+						  <linkType>CornerFiller</linkType>
+						  <linkFlags>
+							<li>Wall</li>
+							<li>Rock</li>
+						  </linkFlags>
+						  <damageData>
+							<cornerTL>Damage/Corner</cornerTL>
+							<cornerTR>Damage/Corner</cornerTR>
+							<cornerBL>Damage/Corner</cornerBL>
+							<cornerBR>Damage/Corner</cornerBR>
+							<edgeTop>Damage/Edge</edgeTop>
+							<edgeBot>Damage/Edge</edgeBot>
+							<edgeLeft>Damage/Edge</edgeLeft>
+							<edgeRight>Damage/Edge</edgeRight>
+						  </damageData>
+						</graphicData>
+						<uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+						<uiIconPathsStuff>
+						  <li>
+							<appearance>Bricks</appearance>
+							<iconPath>Things/Building/Linked/WallBricks_MenuIcon</iconPath>
+						  </li>
+						</uiIconPathsStuff>
+						<statBases>
+						  <MaxHitPoints>320</MaxHitPoints>
+						  <WorkToBuild>145</WorkToBuild>
+						  <Flammability>1.0</Flammability>
+						  <MeditationFocusStrength>0.22</MeditationFocusStrength>
+						</statBases>
+						<costStuffCount>5</costStuffCount>
+						<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+						<altitudeLayer>Building</altitudeLayer>
+						<passability>Impassable</passability>
+						<blockWind>true</blockWind>
+						<castEdgeShadows>true</castEdgeShadows>
+						<fillPercent>1.0</fillPercent>
+						<coversFloor>true</coversFloor>
+						<placingDraggableDimensions>1</placingDraggableDimensions>
+						<tickerType>Never</tickerType>
+						<rotatable>false</rotatable>
+						<selectable>true</selectable>
+						<neverMultiSelect>true</neverMultiSelect>
+						<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+						<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> <!-- Best affordance needed for stone -->
+						<holdsRoof>true</holdsRoof>
+						<designationCategory>Structure</designationCategory>
+						<uiOrder>2001</uiOrder>
+						<staticSunShadowHeight>1.0</staticSunShadowHeight>
+						<blockLight>true</blockLight>
+						<canOverlapZones>false</canOverlapZones>
+						<fertility>0</fertility>
+						<stuffCategories>
+						  <li>Stony</li>
+						</stuffCategories>
+						<costList>
+						  <RFFCement>2</RFFCement>
+						</costList>
+						<building>
+						  <paintable>true</paintable>
+						  <isInert>true</isInert>
+						  <isPlaceOverableWall>true</isPlaceOverableWall>
+						  <ai_chillDestination>false</ai_chillDestination>
+						  <supportsWallAttachments>true</supportsWallAttachments>
+						  <blueprintGraphicData>
+							<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+						  </blueprintGraphicData>
+						  <relatedBuildCommands>
+							<li>Door</li>
+							<li>Autodoor</li>
+							<li>OrnateDoor</li>
+							<li MayRequire="Ludeon.RimWorld.Anomaly">SecurityDoor</li>
+						  </relatedBuildCommands>
+						</building>
+						<comps>
+						  <li Class="CompProperties_MeditationFocus">
+							<statDef>MeditationFocusStrength</statDef>
+							<focusTypes>
+							  <li>Minimal</li>
+							</focusTypes>
+						  </li>
+						</comps>
+						<damageMultipliers>
+						  <li>
+							<damageDef>Bomb</damageDef>
+							<multiplier>2</multiplier>
+						  </li>
+						  <li>
+							<damageDef>Thump</damageDef>
+							<multiplier>2</multiplier>
+						  </li>
+						</damageMultipliers>
+					</ThingDef>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+	
+	<!--Integrate Vanilla Factions Expanded - Classical-->
+	<Operation Class="XmlExtensions.FindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Classical</li>
+		</mods>
+		<caseTrue>
+			<Operation Class="XmlExtensions.OptionalPatch">
+				<modId>Muad.concretepatches</modId>
+				<key>Concretepatches_Settings_CementPressGivesCement</key>
+				<defaultValue>false</defaultValue>
+				
+				<caseTrue>
+					<Operation Class="PatchOperationSequence">
+						<operations>
+								
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ItemProcessor.CombinationDef[defName = "VFEC_PressConcrete"]/result</xpath>
+							<value>
+								<result>RFFCement</result>
+							</value>
+						</li>
+							
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ItemProcessor.CombinationDef[defName = "VFEC_PressConcrete"]/yield</xpath>
+							<value>
+								<yield>3</yield>
+							</value>
+						</li>
+								
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName = "VFEC_ConcretePress"]/description</xpath>
+							<value>
+								<description>A very strong, open stone basin meant to cure and shape a mixture of materials and rock chunks into cement. Yields are lower than with calcination of cement.</description>
+							</value>
+						</li>
+
+						</operations>
+					</Operation>
+				</caseTrue>
+				
+				<caseFalse>
+					<Operation Class="PatchOperationSequence">
+						<operations>
+					
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ItemProcessor.CombinationDef[defName = "VFEC_PressConcrete"]/result</xpath>
+							<value>
+								<result>RFFBlocksConcrete</result>
+							</value>
+						</li>
+							
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ItemProcessor.CombinationDef[defName = "VFEC_PressConcrete"]/yield</xpath>
+							<value>
+								<yield>35</yield>
+							</value>
+						</li>
+						</operations>
+					</Operation>
+				</caseFalse>
+			</Operation>
+			
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="VFEC_TheatreStage_VFEC_BlocksConcrete_North"]</xpath>
+			</Operation>
+			
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/TerrainDef[defName="VFEC_TileConcrete"]</xpath>
+			</Operation>
+			
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/TerrainDef[defName="VFEC_FlagstoneConcrete"]</xpath>
+			</Operation>
+			
+			<Operation Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>Defs/ThingDef[defName="VFEC_BlocksConcrete"]</xpath>
+			</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+<!--Hardmode Walls Patches-->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_LimestoneGivesMoreCement</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationAdd">
+				<xpath>
+					Defs/RecipeDef[defName="MakeCement"]/fixedIngredientFilter
+				</xpath>
+					<value>
+						<disallowedThingDefs>
+							<li>ChunkLimestone</li>
+						</disallowedThingDefs>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>
+					Defs/RecipeDef[defName="MakeCement"]/defaultIngredientFilter
+				</xpath>
+					<value>
+						<disallowedThingDefs>
+							<li>ChunkLimestone</li>
+						</disallowedThingDefs>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationReplace">
+				<xpath>
+					Defs/RecipeDef[defName="MakeCementBlock"]/fixedIngredientFilter/disallowedThingDefs	|
+					Defs/RecipeDef[defName="MakeCementBlock"]/defaultIngredientFilter/disallowedThingDefs
+				</xpath>
+				<value>
+					<disallowedThingDefs>
+						<li>RFFBlocksConcrete</li>
+						<li>BlocksLimestone</li>
+					</disallowedThingDefs>
+				</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+				<RecipeDef>
+					<defName>MakeCementLimestone</defName>
+					<label>make 8 cement (from limestone chunk)</label>
+					<description>Heating limestone to create cement.</description>
+					<jobString>Making cement.</jobString>
+					<workSpeedStat>SmeltingSpeed</workSpeedStat>
+					<workSkillLearnFactor>0.25</workSkillLearnFactor>
+					<effectWorking>Smelt</effectWorking>
+					<soundWorking>Recipe_Smelt</soundWorking>
+					<workAmount>1500</workAmount>
+					<ingredients>
+					  <li>
+						<filter> <thingDefs> <li>ChunkLimestone</li> </thingDefs> </filter>
+						<count>1</count>
+					  </li>
+					</ingredients>
+					<products>
+					  <RFFCement>8</RFFCement>
+					</products>
+					<fixedIngredientFilter>
+					  <thingDefs>
+						<li>ChunkLimestone</li>
+					  </thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+					  <thingDefs>
+						<li>ChunkLimestone</li>
+					  </thingDefs>
+					</defaultIngredientFilter>
+					<workSkill>Crafting</workSkill>
+					<researchPrerequisites>
+						<li>Smithing</li>
+					</researchPrerequisites>
+					<recipeUsers>
+					  <li>FueledSmithy</li>
+					  <li>ElectricSmithy</li>
+					</recipeUsers>
+				  </RecipeDef>
+				
+				 <RecipeDef>
+					<defName>MakeCementLimestoneBlock</defName>
+					<label>make 2 cement (from limestone blocks)</label>
+					<description>Heating limestone to create cement.</description>
+					<jobString>Making cement.</jobString>
+					<workSpeedStat>SmeltingSpeed</workSpeedStat>
+					<workSkillLearnFactor>0.25</workSkillLearnFactor>
+					<effectWorking>Smelt</effectWorking>
+					<soundWorking>Recipe_Smelt</soundWorking>
+					<workAmount>1500</workAmount>
+					<ingredients>
+					  <li>
+						<filter>
+							<thingDefs> <li>BlocksLimestone</li> </thingDefs>
+						</filter>
+						<count>5</count>
+					  </li>
+					</ingredients>
+					<products>
+					  <RFFCement>2</RFFCement>
+					</products>
+					<fixedIngredientFilter>
+					  <thingDefs>
+						<li>BlocksLimestone</li>
+					  </thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+					  <thingDefs>
+						<li>BlocksLimestone</li>
+					  </thingDefs>
+					</defaultIngredientFilter>
+					<workSkill>Crafting</workSkill>
+					<researchPrerequisites>
+						<li>Smithing</li>
+					</researchPrerequisites>
+					<recipeUsers>
+					  <li>FueledSmithy</li>
+					  <li>ElectricSmithy</li>
+					</recipeUsers>
+				  </RecipeDef>
+  
+				</value>
+			</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+</Patch>

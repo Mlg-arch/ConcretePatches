@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_UseSRSand</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="SR_Sand"]</xpath>
+				<match Class="PatchOperationSequence">
+				  <operations>
+					<li Class="PatchOperationReplace">
+					  <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li = "SandPile"]/li</xpath>
+					  <value>
+						<li>SR_Sand</li>
+					  </value>
+					</li>
+					<li Class="PatchOperationReplace">
+					  <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li = "SandPile"]/li</xpath>
+					  <value>
+						<li>SR_Sand</li>
+					  </value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeSand"]/products	|
+							Defs/RecipeDef[defName = "MakeSandSlow"]/products
+						</xpath>
+						<value>
+							<products> <SR_Sand>1</SR_Sand> </products>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName = "MakeSand5"]/products</xpath>
+						<value>
+							<products> <SR_Sand>5</SR_Sand> </products>
+						</value>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/RecipeDef[defName = "SR_SandFromStoneChunkRecipe"]</xpath>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/RecipeDef[defName = "SR_SandFromStoneBlockRecipe"]</xpath>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/RecipeDef[defName = "SR_SandFromStoneBlockRecipeX5"]</xpath>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/ThingDef[defName = "SandPile"]</xpath>
+					</li>
+				  </operations>
+				</match>
+			</Operation>
+		</caseTrue>
+	</Operation>
+	
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_IntegrateEMSM</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<!-- Replace with EM_Sand -->
+			<Operation Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="EM_Sand"]</xpath>
+				<match Class="PatchOperationSequence">
+				  <operations>
+					<li Class="PatchOperationReplace">
+					  <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li = "SandPile"]/li</xpath>
+					  <value>
+						<li>EM_Sand</li>
+					  </value>
+					</li>
+					<li Class="PatchOperationReplace">
+					  <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li = "SandPile"]/li</xpath>
+					  <value>
+						<li>EM_Sand</li>
+					  </value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeSand"]/products	|
+							Defs/RecipeDef[defName = "MakeSandSlow"]/products
+						</xpath>
+						<value>
+							<products> <EM_Sand>1</EM_Sand> </products>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName = "MakeSand5"]/products</xpath>
+						<value>
+							<products> <EM_Sand>5</EM_Sand> </products>
+						</value>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/ThingDef[defName = "SandPile"]</xpath>
+					</li>
+				  </operations>
+				</match>
+			</Operation>
+			
+			<!-- Replace with EM_Cement -->
+			<Operation Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="EM_Cement"]</xpath>
+				<match Class="PatchOperationSequence">
+				  <operations>
+					<li Class="PatchOperationReplace">
+					  <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li = "RFFCement"]/li</xpath>
+					  <value>
+						<li>EM_Cement</li>
+					  </value>
+					</li>
+					<li Class="PatchOperationReplace">
+					  <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li = "RFFCement"]/li</xpath>
+					  <value>
+						<li>EM_Cement</li>
+					  </value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeCement"]/products
+						</xpath>
+						<value>
+							<products> <EM_Cement>4</EM_Cement> </products>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName = "MakeCementBlock"]/products</xpath>
+						<value>
+							<products> <EM_Cement>1</EM_Cement> </products>
+						</value>
+					</li>
+					
+					<!-- <li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/ThingDef[defName = "RFFCement"]</xpath>
+					</li> -->
+				  </operations>
+				</match>
+			</Operation>
+			
+			<!-- Replace with EM_ConcreteBricks -->
+			<Operation Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="EM_ConcreteBricks"]</xpath>
+				<match Class="PatchOperationSequence">
+				  <operations>
+					<li Class="PatchOperationSetName">
+					  <xpath>/Defs/ThingDef/costList/RFFBlocksConcrete</xpath>
+						<name>EM_ConcreteBricks</name>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeConcreteBlocks"]/products	|
+							Defs/RecipeDef[defName = "MakeConcreteBlocksRM"]/products
+						</xpath>
+						<value>
+							<products> <EM_ConcreteBricks>75</EM_ConcreteBricks> </products>
+						</value>
+					</li>
+					
+					<!-- <li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/ThingDef[defName = "RFFBlocksConcrete"]</xpath>
+					</li> -->
+				  </operations>
+				</match>
+			</Operation>
+			
+			<Operation Class="XmlExtensions.OptionalPatch">
+				<modId>Muad.concretepatches</modId>
+				<key>Concretepatches_Settings_CementPressGivesCement</key>
+				<defaultValue>false</defaultValue>
+				<caseFalse>
+						<Operation Class="PatchOperationReplace">
+						<xpath>/Defs/ItemProcessor.CombinationDef[defName = "VFEC_PressConcrete"]/result</xpath>
+						<value>
+							<result>EM_ConcreteBricks</result>
+						</value>
+					</Operation>
+				</caseFalse>
+			</Operation>
+		</caseTrue>
+	</Operation>
+</Patch>
+
+	

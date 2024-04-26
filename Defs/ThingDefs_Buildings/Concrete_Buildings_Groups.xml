@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ############# Power ############# -->
+
+	<DesignatorDropdownGroupDef> 
+		<defName>RFCGroup_Walls</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef> 
+		<defName>RFCGroup_Doors</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<DesignatorDropdownGroupDef> 
+		<defName>RFCGroup_Embrasures</defName>
+	</DesignatorDropdownGroupDef>
+</Defs>
