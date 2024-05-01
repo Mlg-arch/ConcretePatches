@@ -41,3 +41,14 @@ Concrete Patches revitalizes and modernizes the classic [RF] Concrete mod, bring
 10. **Integrate with Expanded Materials - Stones and Mortars**: Integrates with Expanded Materials - Stones and Mortars mod, enhancing recipe options. Untested as the mod is not updated to 1.5.
 
 Experience a refreshed and enhanced [RF] Concrete with Concrete Patches, offering a modernized gameplay experience tailored to your preferences.
+
+**Dependencies**  
+[[RF] Concrete (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2012397587)  
+[XML Extensions](https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206)  
+
+**Credits**  
+Textures for blocks, cement, crushed rocks and sand comes from [Expanded Materials - Stones and Mortars](https://steamcommunity.com/sharedfiles/filedetails/?id=2859334065) by Argón.  
+Texture for concrete comes from [Easy Concrete](https://steamcommunity.com/sharedfiles/filedetails/?id=2848166488) by ILuvSilicon.  
+Texture for the Rock Mixer (now renamed Concrete Mixer) comes from [Industrial concrete](https://steamcommunity.com/sharedfiles/filedetails/?id=2888037450) by AOBA.  
+
+These textures are the property of their creators. All rights are theirs.
