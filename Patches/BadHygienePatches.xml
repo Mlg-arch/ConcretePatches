@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Disable Embrasures -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_BadHygienePatches</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="WaterWellInlet"]</xpath>
+					<value>
+						<costList> <RFFCement>12</RFFCement> </costList>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ElectricPump"]/costList</xpath>
+					<value>
+						<RFFCement>4</RFFCement>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="SewageSepticTank"]/costList</xpath>
+					<value>
+						<RFFCement>8</RFFCement>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DeepWaterWellInlet"]/costList</xpath>
+					<value>
+						<RFFConcrete>50</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="PumpingStation"]/costList</xpath>
+					<value>
+						<RFFConcrete>30</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="SewageTreatment"]/costList</xpath>
+					<value>
+						<RFFConcrete>90</RFFConcrete>
+					</value>
+			</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	
+</Patch>

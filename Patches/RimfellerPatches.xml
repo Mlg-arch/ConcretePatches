@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Disable Embrasures -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_RimfellerPatches</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="OilWell"]/costList</xpath>
+					<value>
+						<RFFConcrete>30</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DeepOilWell"]/costList</xpath>
+					<value>
+						<RFFConcrete>60</RFFConcrete>
+					</value>
+			</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	
+</Patch>

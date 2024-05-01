@@ -29,12 +29,14 @@
 		<li>Mlie.Concrete</li>
 		<li>UdderlyEvelyn.SoilRelocation</li>
 		<li>VanillaExpanded.VFEArchitect</li>
-		<li>Dubwise.DubsBadHygiene</li>
 		<li>sindre0830.rimnauts2</li>
 		<li>imranfish.xmlextensions</li>
 		<li>AIRetexture.Mods</li>
 		<li>JPT.FertileFieldsMakeover</li>
 		<li>Argon.ExpandedMaterials.Stones</li>
+		<li>Dubwise.DubsBadHygiene</li>
+		<li>Dubwise.Rimefeller</li>
+		<li>Dubwise.Rimatomics</li>
 	</loadAfter>
     <packageId>Muad.concretepatches</packageId>
 </ModMetaData>

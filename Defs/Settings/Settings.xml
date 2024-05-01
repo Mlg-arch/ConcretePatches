@@ -99,6 +99,73 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Dubs Mods Integrations -->
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Dubs Mods Integrations</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.GapLine"> </li>
+			
+			<!-- Rimatomics Integration -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Rimatomics Integration</label>
+				<key>Concretepatches_Settings_RimatomicsPatches</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Add a concrete requirement for several of the Rimatomic buildings, such as cooling towers, radiation pools and missile silos. Does not change vanilla Rimatomics costs, just adds to it. The added costs in concrete can be very high for the larger buildings.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Rimefeller Integration -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Rimefeller Integration</label>
+				<key>Concretepatches_Settings_RimfellerPatches</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds concrete requirements for oil wells and deep oil wells, scaling.</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Bad Hygiene Integration -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Bad Hygiene Integration</label>
+				<key>Concretepatches_Settings_BadHygienePatches</key>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds concrete and sometimes cement requirements for several buildings that would logically use them or use them in the graphics (such as electric pumps).</text>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			
+			<!-- Disable RF Concrete Buildings -->
+			
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Disable Buildings/Things</text>
 				<font>Medium</font>

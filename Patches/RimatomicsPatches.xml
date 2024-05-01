@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Disable Embrasures -->
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_RimatomicsPatches</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CoolingTower"]/costList</xpath>
+					<value>
+						<RFFConcrete>750</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="RadiationShielding"]/costList</xpath>
+					<value>
+						<RFFConcrete>5</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>
+					Defs/ThingDef
+						[
+							defName="ReactorSacrophagus"
+							or defName="ReactorSacrophagusB"
+							or defName="ReactorSacrophagusC"
+						]
+				</xpath>
+					<value>
+						<costList> <RFFConcrete>500</RFFConcrete> </costList>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MissileSilo"]/costList</xpath>
+					<value>
+						<RFFConcrete>300</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="storagePool"]/costList</xpath>
+					<value>
+						<RFFConcrete>350</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ResearchReactor"]/costList</xpath>
+					<value>
+						<RFFConcrete>200</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ReactorCoreA"]/costList</xpath>
+					<value>
+						<RFFConcrete>250</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ReactorCoreB"]/costList</xpath>
+					<value>
+						<RFFConcrete>300</RFFConcrete>
+					</value>
+			</Operation>
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="ReactorCoreC"]/costList</xpath>
+					<value>
+						<RFFConcrete>500</RFFConcrete>
+					</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+	
+	
+</Patch>
