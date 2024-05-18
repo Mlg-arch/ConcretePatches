@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+						
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[defName = "ConcretePatchesSettings"]/settings/li[tag="ConcretePatchesIntegrationEMSM"]/settings</xpath>
+				<value>
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Integrate with Expanded Materials - Stones and Mortars</label>
+					<key>Concretepatches_Settings_IntegrateEMSM</key>
+					<defaultValue>false</defaultValue>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>This patch integrates with Expanded Materials - Stones and Mortars. It uses Sand, Cement and Concrete Blocks from the latter in the recipes of [RF] Concrete. Integration is untested since the mod is not updated for 1.5.</text>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+				</li>
+						
+				</value>
+				
+		</Operation>
+		
+	
+</Patch>

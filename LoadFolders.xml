@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<loadFolders>
+	
+	<v1.5>			
+		<!-- Core -->
+		
+		<li>/</li>
+		
+		<li>1.5</li>
+		
+		<!-- Dubs Bad Hygiene -->
+		<li IfModActive="dubwise.dubsbadhygiene">1.5/Mods/Dubs Bad Hygiene</li>
+		
+		<!-- Rimatomics -->
+		<li IfModActive="dubwise.Rimatomics">1.5/Mods/Rimatomics</li>
+		
+		<!-- Rimefeller -->
+		<li IfModActive="Dubwise.Rimefeller">1.5/Mods/Rimefeller</li>
+		
+		<!-- Vanilla Factions Expanded - Classical -->
+		<li IfModActive="OskarPotocki.VFE.Classical">1.5/Mods/Vanilla Factions Expanded Classical</li>
+		
+		<!-- Rimnauts 2 -->
+		<li IfModActive="sindre0830.rimnauts2">1.5/Mods/Rimnauts 2</li>
+		
+		<!-- Soil Relocation Framework -->
+		<li IfModActive="UdderlyEvelyn.SoilRelocation">1.5/Mods/Soil Relocation Framework</li>
+		
+		<!-- Soil Relocation Framework -->
+		<li IfModActive="Mlie.SoilRelocationFramework">1.5/Mods/Soil Relocation Framework</li>
+		
+		<!-- Expanded Materials - Stones and Mortars -->
+		<li IfModActive="Argon.ExpandedMaterials.Stones">1.5/Mods/Expanded Materials - Stones and Mortars</li>
+		
+		
+	</v1.5>
+	
+</loadFolders>

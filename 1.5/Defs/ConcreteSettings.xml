@@ -14,6 +14,7 @@
 				<text>For any changed settings to take effect the game must be restarted.</text>
 				<font>Medium</font>
 				<anchor>Middle</anchor>
+				<tKey>ConcreteModWarning</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -23,6 +24,7 @@
 				<text>Gameplay Tweaks</text>
 				<font>Medium</font>
 				<anchor>Middle</anchor>
+				<tKey>ConcreteOptionsTitle</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
@@ -33,6 +35,7 @@
 				<label>Hardmode</label>
 				<key>Concretepatches_Settings_Hardmode</key>
 				<defaultValue>false</defaultValue>
+				<tKey>Concretepatches_Settings_HardmodeTitle</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor">
 				<color>(163,177,188)</color>
@@ -51,6 +54,7 @@
 				<label>Hardmode Walls</label>
 				<key>Concretepatches_Settings_HardmodeWalls</key>
 				<defaultValue>false</defaultValue>
+				<tKey>Concretepatches_Settings_HardmodeWallsTitle</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor">
 				<color>(163,177,188)</color>
@@ -63,30 +67,13 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Cement Press Gives Cement -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Cement Press Yield Correction</label>
-				<key>Concretepatches_Settings_CementPressGivesCement</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>If you are using Vanilla Factions Expanded - Classical and activate this patch, Cement Press will give 3 units of cement when used. This is more (though not completely) realistic. If this option is disabled, this will give you 35 Cinder blocks from [RF] Concrete. Regardless, this mod completely removes the VFEC concrete blocks.</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Limestone give more Cement -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<label>Higher Cement Yield from Limestone</label>
 				<key>Concretepatches_Settings_LimestoneGivesMoreCement</key>
 				<defaultValue>false</defaultValue>
+				<tKey>Concretepatches_Settings_LimestoneGivesMoreCementTitle</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor">
 				<color>(163,177,188)</color>
@@ -98,71 +85,6 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
-			
-			<!-- Dubs Mods Integrations -->
-			
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Dubs Mods Integrations</text>
-				<font>Medium</font>
-				<anchor>Middle</anchor>
-			</li>
-			
-			<li Class="XmlExtensions.Setting.GapLine"> </li>
-			
-			<!-- Rimatomics Integration -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Rimatomics Integration</label>
-				<key>Concretepatches_Settings_RimatomicsPatches</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Add a concrete requirement for several of the Rimatomic buildings, such as cooling towers, radiation pools and missile silos. Does not change vanilla Rimatomics costs, just adds to it. The added costs in concrete can be very high for the larger buildings.</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Rimefeller Integration -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Rimefeller Integration</label>
-				<key>Concretepatches_Settings_RimfellerPatches</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds concrete requirements for oil wells and deep oil wells, scaling.</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Bad Hygiene Integration -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Bad Hygiene Integration</label>
-				<key>Concretepatches_Settings_BadHygienePatches</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds concrete and sometimes cement requirements for several buildings that would logically use them or use them in the graphics (such as electric pumps).</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			
 			<!-- Disable RF Concrete Buildings -->
 			
@@ -228,27 +150,43 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Mod Tweaks -->
+			<li Class="XmlExtensions.Setting.Text">
+					<text>Mod Integrations</text>
+					<font>Medium</font>
+					<anchor>Middle</anchor>
+				</li>
+				<li Class="XmlExtensions.Setting.GapLine">
+				</li>
+			
+			<!-- Vanilla Factions Expanded - Classical Integration -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>ConcretePatchestweaksVFEC</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+						
+			<!-- Dubs Mods Integration -->
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>ConcretePatchestweaksDubs</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
 			<!-- Remove Rimnauts 2 Steel Bridge -->
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>ConcretePatchestweaksRimnauts2</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
 			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Remove Rimnauts 2 Steel Bridget</label>
-				<key>Concretepatches_Settings_DisableR2Bridge</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
+			<!-- Integration Patches -->
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Rimnauts 2 has a steel bridge that might be a duplicate for you. This option removes it.</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Integration Patches</text>
+				<text>Total Conversion Patches</text>
 				<font>Medium</font>
 				<anchor>Middle</anchor>
 			</li>
@@ -263,40 +201,22 @@
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine"></li>
+			
 			<!-- Use Soil Relocation Framework Sand -->
 			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Use Soil Relocation Framework Sand</label>
-				<key>Concretepatches_Settings_UseSRSand</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>This patch replaces the RF Concrete sand with the sand from Soil Relocation Framework. This makes both mods more compatible - avoiding a duplicate sand item.</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>ConcretePatchesIntegrationSRF</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
 			</li>
 			
 			<!-- Integrate with Expanded Materials - Stones and Mortars -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Integrate with Expanded Materials - Stones and Mortars</label>
-				<key>Concretepatches_Settings_IntegrateEMSM</key>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>This patch integrates with Expanded Materials - Stones and Mortars. It uses Sand, Cement and Concrete Blocks from the latter in the recipes of [RF] Concrete. Integration is untested since the mod is not updated for 1.5.</text>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>ConcretePatchesIntegrationEMSM</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
 			</li>
 			
 		</settings>

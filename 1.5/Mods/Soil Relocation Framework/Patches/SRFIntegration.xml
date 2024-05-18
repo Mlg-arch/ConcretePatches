@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Muad.concretepatches</modId>
+		<key>Concretepatches_Settings_UseSRSand</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="SR_Sand"]</xpath>
+				<match Class="PatchOperationSequence">
+				  <operations>
+					<li Class="PatchOperationReplace">
+					  <xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs[li = "SandPile"]/li</xpath>
+					  <value>
+						<li>SR_Sand</li>
+					  </value>
+					</li>
+					<li Class="PatchOperationReplace">
+					  <xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs[li = "SandPile"]/li</xpath>
+					  <value>
+						<li>SR_Sand</li>
+					  </value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>
+							Defs/RecipeDef[defName = "MakeSand"]/products	|
+							Defs/RecipeDef[defName = "MakeSandSlow"]/products
+						</xpath>
+						<value>
+							<products> <SR_Sand>1</SR_Sand> </products>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName = "MakeSand5"]/products</xpath>
+						<value>
+							<products> <SR_Sand>5</SR_Sand> </products>
+						</value>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/RecipeDef[defName = "SR_SandFromStoneChunkRecipe"]</xpath>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/RecipeDef[defName = "SR_SandFromStoneBlockRecipe"]</xpath>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/RecipeDef[defName = "SR_SandFromStoneBlockRecipeX5"]</xpath>
+					</li>
+					
+					<li Class="XmlExtensions.PatchOperationSafeRemove">
+						<xpath>Defs/ThingDef[defName = "SandPile"]</xpath>
+					</li>
+				  </operations>
+				</match>
+			</Operation>
+		</caseTrue>
+	</Operation>
+</Patch>

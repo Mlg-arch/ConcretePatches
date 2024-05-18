@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
    <Operation Class="PatchOperationAdd">
-      <xpath>/Defs</xpath>
+      <xpath>Defs</xpath>
       <value>
          <TerrainDef ParentName="FlagstoneBase">
 			<defName>FlagstoneCinderblocks</defName>
@@ -30,7 +30,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
+					<xpath>Defs</xpath>
 					<value>
 						<TerrainDef ParentName="CobblestoneBase">
 							<defName>VFEArch_CobblestoneFloorCinder</defName>

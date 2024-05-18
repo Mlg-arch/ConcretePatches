@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+						
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[defName = "ConcretePatchesSettings"]/settings/li[tag="ConcretePatchestweaksDubs"]/settings</xpath>
+				<value>
+				
+				<!-- Rimatomics Integration -->
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Rimatomics Integration</label>
+					<key>Concretepatches_Settings_RimatomicsPatches</key>
+					<defaultValue>false</defaultValue>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Add a concrete requirement for several of the Rimatomic buildings, such as cooling towers, radiation pools and missile silos. Does not change vanilla Rimatomics costs, just adds to it. The added costs in concrete can be very high for the larger buildings.</text>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+					
+				</value>
+				
+		</Operation>
+		
+	
+</Patch>

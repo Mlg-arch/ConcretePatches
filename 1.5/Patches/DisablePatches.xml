@@ -87,18 +87,4 @@
 		</caseFalse>
 	</Operation>
 	
-	<!-- Disable Rimnauts 2 Steel Bridge -->
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>Muad.concretepatches</modId>
-		<key>Concretepatches_Settings_DisableR2Bridge</key>
-		<defaultValue>false</defaultValue>
-		<caseTrue>
-			 <Operation Class="PatchOperationConditional">
-				<xpath>Defs/TerrainDef[defName="RimNauts2_SteelBridge"]</xpath>
-				<match Class="XmlExtensions.PatchOperationSafeRemove">
-					<xpath>Defs/TerrainDef[defName="RimNauts2_SteelBridge"]</xpath>
-				</match>
-			</Operation>
-		</caseTrue>
-	</Operation>
 </Patch>

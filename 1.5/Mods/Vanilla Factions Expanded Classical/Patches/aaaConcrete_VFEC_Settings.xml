@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+						
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[defName = "ConcretePatchesSettings"]/settings/li[tag="ConcretePatchestweaksVFEC"]/settings</xpath>
+				<value>
+	
+				<!-- Cement Press gives Cement -->
+			
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Vanilla Factions Expanded - Classical Integration</label>
+						<key>Concretepatches_Settings_CementPressGivesCement</key>
+						<defaultValue>false</defaultValue>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>If you are using Vanilla Factions Expanded - Classical and activate this patch, Cement Press will give 3 units of cement when used. This is more (though not completely) realistic. If this option is disabled, this will give you 35 Cinder blocks from [RF] Concrete. Regardless of your choice, this mod completely removes the VFEC concrete blocks in favour of [RF] Concrete blocks.</text>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.GapLine">
+					</li>
+			
+					
+				</value>
+				
+		</Operation>
+		
+	
+</Patch>

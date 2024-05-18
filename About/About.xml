@@ -28,6 +28,7 @@
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Mlie.Concrete</li>
 		<li>UdderlyEvelyn.SoilRelocation</li>
+		<li>Mlie.SoilRelocationFramework</li>
 		<li>VanillaExpanded.VFEArchitect</li>
 		<li>sindre0830.rimnauts2</li>
 		<li>imranfish.xmlextensions</li>
@@ -37,6 +38,7 @@
 		<li>Dubwise.DubsBadHygiene</li>
 		<li>Dubwise.Rimefeller</li>
 		<li>Dubwise.Rimatomics</li>
+		<li>OskarPotocki.VFE.Classical</li>
 	</loadAfter>
     <packageId>Muad.concretepatches</packageId>
 </ModMetaData>

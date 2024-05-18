@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+						
+			
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[defName = "ConcretePatchesSettings"]/settings/li[tag="ConcretePatchesIntegrationSRF"]/settings</xpath>
+				<value>
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Use Soil Relocation Framework Sand</label>
+					<key>Concretepatches_Settings_UseSRSand</key>
+					<defaultValue>false</defaultValue>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>This patch replaces the RF Concrete sand with the sand from Soil Relocation Framework. This makes both mods more compatible - avoiding a duplicate sand item.</text>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+						
+				</value>
+				
+		</Operation>
+		
+	
+</Patch>

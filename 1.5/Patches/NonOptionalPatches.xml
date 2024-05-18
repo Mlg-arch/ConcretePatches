@@ -148,7 +148,7 @@
 				<defaultValue>false</defaultValue>
 				<caseFalse>
 					<Operation Class="XmlExtensions.PatchOperationSafeAdd">
-						<xpath>//Defs/ThingDef[defName="Sandbags"]</xpath>
+						<xpath>Defs/ThingDef[defName="Sandbags"]</xpath>
 						<value>
 							<costList> <SandPile>2</SandPile> </costList>
 						</value>

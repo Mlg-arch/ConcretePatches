@@ -9,19 +9,19 @@
 			<operations>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="RockMill"]/graphicData/drawSize</xpath>
+					<xpath>Defs/ThingDef[defName="RockMill"]/graphicData/drawSize</xpath>
 					<value> <drawSize>(3,4)</drawSize> </value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="RockMill"]/size</xpath>
+					<xpath>Defs/ThingDef[defName="RockMill"]/size</xpath>
 					<value>
 						<size>(1,2)</size>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="RFFBlocksConcrete"]/graphicData/texPath</xpath>
+					<xpath>Defs/ThingDef[defName="RFFBlocksConcrete"]/graphicData/texPath</xpath>
 					<value>
 						<texPath>RBlocksConcrete</texPath>
 					</value>
